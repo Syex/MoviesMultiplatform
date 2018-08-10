@@ -1,6 +1,6 @@
-package gcx
+package net.grandcentrix
 
-import de.gcx.Api
+import net.grandcentrix.network.Api
 
 fun main(args: Array<String>) {
     println("Doing HTTP")

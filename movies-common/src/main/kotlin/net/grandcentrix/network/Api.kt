@@ -1,4 +1,4 @@
-package de.gcx
+package net.grandcentrix.network
 
 import io.ktor.client.HttpClient
 import io.ktor.client.request.get

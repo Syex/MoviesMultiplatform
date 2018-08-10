@@ -1,5 +1,6 @@
 plugins {
     id 'kotlin-platform-jvm' version '1.2.60'
+    id 'kotlinx-serialization' version '0.6.1'
 }
 
 repositories {
@@ -16,6 +17,9 @@ dependencies {
 
     // Client dependency contains actual implementations of the common dependency
     implementation "io.ktor:ktor-client-android:0.9.4-alpha-2"
+
+    // Client dependency contains actual implementations of the common dependency
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.6.1"
 
     testImplementation "junit:junit:4.12"
     testImplementation "org.jetbrains.kotlin:kotlin-test-junit"

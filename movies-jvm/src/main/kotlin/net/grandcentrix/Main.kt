@@ -4,7 +4,7 @@ import net.grandcentrix.network.Api
 
 fun main(args: Array<String>) {
     println("Doing HTTP")
-    Api().about {
+    Api().singleMovie("550") {
         println("done")
         println(it)
     }

@@ -22,3 +22,19 @@ kotlin {
         coroutines "enable"
     }
 }
+
+Task injectApikey = tasks.create("injectApikey") {
+    doLast {
+        String sourceSet = sourceSets.main.kotlin.srcDirs.toSet().iterator().next()
+        File file = new File("${sourceSet}/net/grandcentrix/network", "ApiKey.kt")
+	      file.createNewFile()
+        String apiKey = project.properties.get("theMoviesDBAPIKey")
+	      file.setText("""
+            package net.grandcentrix.network
+
+            internal const val APIKEY = \"${apiKey}\"
+        """)
+    }
+}
+
+build.dependsOn(injectApikey)
